@@ -1,0 +1,15 @@
+.outer{
+    position:relative;
+    display: inline-block;
+    color:black;
+}
+.inner{
+    position: absolute; 
+    left:0;
+    top:0;
+    white-space: nowrap;
+    color:red;
+    overflow: hidden;
+    width: 0;
+
+}
