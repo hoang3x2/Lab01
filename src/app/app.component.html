@@ -1,33 +1,9 @@
 <div class="container">
-    <h3 style="color: chocolate">bai1:</h3>
-    <app-baitap1></app-baitap1>
-    <br>
-    <br>
-    <br>
-    <h3 style="color: chocolate">bai2:</h3>
-    <app-baitap2></app-baitap2>
-    <br>
-    <br>
-    <br>
-    <h3 style="color: chocolate">bai3:</h3>
-    <app-baitap3></app-baitap3>
-    <br>
-    <br>
-    <app-products></app-products>
-    <br>
-    <br>
-    <app-detailproducts></app-detailproducts>
-    <br>
-    <br>
-    <app-hienimage></app-hienimage>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div style="text-align: right">
-        <h2>
-            <a href="https://www.facebook.com/20H3X">Liên Hệ Facebook cá nhân</a>
-        </h2>
-    </div>
-
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#" routerLink='/home'>Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Library</a></li>
+        </ol>
+    </nav>
+    <router-outlet></router-outlet>
 </div>

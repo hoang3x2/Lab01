@@ -1,26 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductsComponent } from './products/products.component';
-import { DetailproductsComponent } from './detailproducts/detailproducts.component';
-import { HienimageComponent } from './hienimage/hienimage.component';
-import { Baitap1Component } from './baitap1/baitap1.component';
-import { Baitap2Component } from './baitap2/baitap2.component';
-import { Baitap3Component } from './baitap3/baitap3.component';
+import { HomeComponent } from './home/home.component';
+import { SinhvienComponent } from './sinhvien/sinhvien.component';
+import {RouterModule} from '@angular/router';
+import { HtmlParser } from '@angular/compiler';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductsComponent,
-    DetailproductsComponent,
-    HienimageComponent,
-    Baitap1Component,
-    Baitap2Component,
-    Baitap3Component
+    HomeComponent,
+    SinhvienComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    RouterModule.forRoot([
+      {path:'',component:HomeComponent},
+      {path:'home',component:HomeComponent},
+      {path:'home/:ID',component:SinhvienComponent},
+      { path: '', redirectTo: 'home', pathMatch: 'full' }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

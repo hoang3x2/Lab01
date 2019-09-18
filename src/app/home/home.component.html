@@ -1,0 +1,61 @@
+<div class="card">
+    <h5 class="card-header">
+        <i class='far fa-address-card'></i>
+        Danh Sách Sinh Viên
+    </h5>
+    <nav class="navbar navbar-light bg-light">
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search for..." aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"
+                style="background-color:rgb(92, 129, 243);color: white"><i class="fa fa-search"></i></button>
+        </form>
+    </nav>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">LastName</th>
+                <th scope="col">FirstName</th>
+                <th scope="col">EnrollmentDate</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let s of students">
+                <td>{{s.FirstMidName}}</td>
+                <td>{{s.LastName}}</td>
+                <td>{{s.EnrollmentDate}}</td>
+                <td>
+                    <a style="margin: 20px" [routerLink]="['/home',s.ID]"><i class="fa fa-exclamation"
+                            style="font-size:24px"></i></a>
+                    <button style="background-color:rgb(240, 144, 80)" (click)="delete(s.ID)">
+                        <a style="color: rgb(240, 243, 243)" ><i class="fa fa-trash-o"
+                                style="font-size:24px"></i></a>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="row">
+        <div class="col-8">
+            <p style="margin: 15px">Showing 1 of 3</p>
+        </div>
+        <div class="col-4">
+            <nav aria-label="...">
+                <ul class="pagination">
+                  <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                  </li>
+                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                  </li>
+                </ul>
+              </nav>
+        </div>
+    </div>
+    
+</div>

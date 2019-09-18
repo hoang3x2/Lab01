@@ -1,0 +1,33 @@
+<div class="card">
+        <h5 class="card-header">
+            <i class='far fa-address-card'></i>
+            Detail
+        </h5>
+        <div>
+            <div>
+                Last name: <p>{{product.FirstMidName}}</p>
+            </div>
+            <div>
+                First name: <p>{{product.LastName}}</p>
+            </div>
+            <div>
+                EnrollmentDate: <p>{{product.EnrollmentDate}}</p>
+            </div>
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Course Title</th>
+                    <th scope="col">Grade</th>
+                    <th scope="col">Credits</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let f of full">
+                    <td>{{f.Title}}</td>
+                    <td>{{f.Grade}}</td>
+                    <td>{{f.Credits}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
